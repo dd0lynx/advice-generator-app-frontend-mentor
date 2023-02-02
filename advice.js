@@ -6,7 +6,7 @@ const generateAdvice = async () => {
     const slip = await response.json()
 
     console.log(slip.slip)
-    id.innerText = slip.slip.id
+    id.innerText = '#' + slip.slip.id
     advice.innerText = '"' + slip.slip.advice + '"'
 }
 

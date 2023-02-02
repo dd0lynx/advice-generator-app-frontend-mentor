@@ -54,6 +54,7 @@ main {
 .card {
     /* width: clamp(375px, 40vw, 40vw); */
     width: clamp(min(475px, 76vw), 40vw, 40vw);
+    max-width: max-content;
     margin: auto;
     padding: 3rem calc(min(8%, 4rem));
     padding-bottom: 0;
@@ -69,7 +70,9 @@ main {
 
 .id-line {
     display: flex;
+    flex-wrap: wrap;
     place-content: center;
+    gap: 1rem;
 }
 .id-line p {
     color: var(--neon-green);
@@ -100,10 +103,16 @@ main {
     border-radius: 50%;
 }
 
+.gen-btn:hover, .gen-btn:active {
+    cursor: pointer;
+    box-shadow: 0 0 40px var(--neon-green);
+}
+
 .attribution { 
-    margin-top: 40px;
+    margin-top: 50px;
     font-size: 11px;
+    color: var(--light-cyan);
 }
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: var(--neon-green);
 }
