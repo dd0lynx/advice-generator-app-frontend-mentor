@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+    /* Primary Colors */
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    /* Neutral Colors */
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+
+    /* Font */
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    text-align: center;
+
+    --button-size: 65px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.mobile {
+    display: block;
+}
+.desktop {
+    display: none;
+}
+@media screen and (min-width: 600px) {
+    .mobile {
+        display: none;
+    }
+    .desktop {
+        display: block;
+    }
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    place-content: center;
+    place-items: center;
+
+    background: var(--dark-blue);
+}
+
+main {
+    width: 100%;
+}
+
+.card {
+    /* width: clamp(375px, 40vw, 40vw); */
+    width: clamp(min(475px, 76vw), 40vw, 40vw);
+    margin: auto;
+    padding: 3rem calc(min(8%, 4rem));
+    padding-bottom: 0;
+
+    display: flex;
+    flex-flow: column;
+    place-content: center;
+    gap: 2rem;
+
+    border-radius: 1rem;
+    background: var(--dark-grayish-blue);
+}
+
+.id-line {
+    display: flex;
+    place-content: center;
+}
+.id-line p {
+    color: var(--neon-green);
+    letter-spacing: .5rem;
+}
+
+#advice {
+    color: var(--light-cyan);
+    font-size: 28px;
+}
+
+.generator {
+    display: flex;
+    flex-flow: column;
+    place-items: center;
+}
+.divider {
+    width: 100%;
+}
+.gen-btn {
+    position: relative;
+    top: calc(var(--button-size)/2);
+    width: var(--button-size);
+    height: var(--button-size);
+
+    background-color: var(--neon-green);
+    border: none;
+    border-radius: 50%;
+}
+
+.attribution { 
+    margin-top: 40px;
+    font-size: 11px;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
